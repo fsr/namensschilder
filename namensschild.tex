@@ -2,113 +2,110 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[german]{babel}
-\usepackage[paperwidth=90mm,paperheight=53.5mm,nohead,nofoot,margin=0mm]{geometry}
-\usepackage[scaled=.90]{helvet}
+\usepackage[paperwidth=90mm,paperheight=53.5mm,nohead,nofoot,margin=3mm]{geometry}
 \usepackage{graphicx}
 
 \setlength{\parindent}{0pt}
 \pagestyle{empty}
+\usepackage{fontspec}
+\setmainfont{Haettenschweiler}
 \raggedright
 
-\newcommand{\Karte}[1]{%
-	\hspace{0.5mm}
-	\includegraphics[width=1.5cm]{ese-logo.png}
-	\rule{\textwidth}{0pt}\vfill%
-	{\sffamily\fontsize{48}{0pt}\selectfont ~\hfill#1\hfill~\par}%
-	\vspace{1cm}
-	{~\hfill\sffamily\fontsize{16}{0}\selectfont ESE 2014\hfill~\par}%
-	\vspace*{2mm}
-	\clearpage
+\newcommand{\karte}[2]{%
+	\includegraphics[width=1.5cm]{ese-logo.png}%
+	\vfill%
+	\raggedleft%
+	{\fontsize{65}{0}\selectfont #1\par}%
+	{\fontsize{25}{0}\selectfont #2\par}%
+	\raggedright%
+	\clearpage%
 }
 
 \begin{document}
 
-\Karte{Philipp}
-\Karte{Kilian}
-\Karte{Dirk}
-\Karte{Sascha}
-\Karte{Sebastian}
-\Karte{Rico}
-\Karte{Anita}
-\Karte{Julius}
-\Karte{Justus}
-\Karte{Katja}
-\Karte{Marcel}
-\Karte{Tamara}
-\Karte{Meinhardt}
-\Karte{Laura}
-\Karte{Felix}
-\Karte{Jens}
-\Karte{Sebastian}
-\Karte{Adrian}
-\Karte{Patrick}
-\Karte{Josephine}
-\Karte{Nadja}
-\Karte{Kristian}
-\Karte{Vincent}
-\Karte{Alexandra}
-\Karte{Dominik}
-\Karte{Sinthu}
-\Karte{Bettina}
-\Karte{Markus}
-\Karte{Anna}
-\Karte{Anna}
-\Karte{Franziska}
-\Karte{Tim}
-\Karte{Max}
-\Karte{David}
-\Karte{Georg}
-\Karte{Lisa}
-\Karte{Marius}
-\Karte{Nikolai}
-\Karte{Daniel}
-\Karte{Sara}
-\Karte{Christian}
-\Karte{Marc}
-\Karte{Lucas}
-\Karte{Richard}
-\Karte{Thomas}
-\Karte{Max}
-\Karte{Simon}
-\Karte{Ben}
-\Karte{Peter}
-\Karte{Melanie}
-\Karte{Lara}
-\Karte{Ian}
-\Karte{Anja}
-\Karte{Frank}
-\Karte{Duc}
-\Karte{Sven}
-\Karte{Fabian}
-\Karte{Christoph}
-\Karte{Florian}
-\Karte{Manuel}
-\Karte{Emma}
-\Karte{Anne-Marie}
-\Karte{Stefan}
-\Karte{Chris}
-\Karte{Ulrich}
-\Karte{Richard}
-\Karte{Franz}
-\Karte{Sebastian}
-\Karte{Christian}
-\Karte{Michael}
-\Karte{Adrian}
-\Karte{Lars}
-\Karte{Seppl}
-\Karte{Matthias}
-\Karte{Andreas}
-\Karte{Sandra}
-\Karte{Axel}
-\Karte{Willi}
-\Karte{Sandra}
-\Karte{Julian}
-\Karte{Philipp}
-\Karte{Björn}
-\Karte{Martin}
-\Karte{Franziska}
-\Karte{Marco}
-\Karte{Hung}
-
+\karte{Philipp}{Heisig}
+\karte{Kilian}{Költzsch}
+\karte{Dirk}{Legler}
+\karte{Sascha}{Peukert}
+\karte{Sebastian}{Mielke}
+\karte{Rico}{Skultety}
+\karte{Anita}{Grützner}
+\karte{Julius}{Gonsior}
+\karte{Justus}{Adam}
+\karte{Katja}{Linnemann}
+\karte{Marcel}{Rösler}
+\karte{Tamara}{Flemisch}
+\karte{Meinhardt}{Branig}
+\karte{Laura}{Zepner}
+\karte{Felix}{Döring}
+\karte{Jens}{Wettlaufer}
+\karte{Sebastian}{Vogt}
+\karte{Adrian}{Lieber}
+\karte{Patrick}{Stiller}
+\karte{Josephine}{Rehak}
+\karte{Nadja}{Konrad}
+\karte{Kristian}{Kyas}
+\karte{Vincent}{Nadoll}
+\karte{Alexandra}{Krien}
+\karte{Dominik}{Pataky}
+\karte{Sinthujan}{Thanabalasingam}
+\karte{Bettina}{Blasberg}
+\karte{Markus}{Damm}
+\karte{Anna}{Baumgärtel}
+\karte{Anna}{Brauer}
+\karte{Franziska}{Ressel}
+\karte{Tim}{Kluge}
+\karte{Max}{Korn}
+\karte{David}{Ordnung}
+\karte{Georg}{Eckert}
+\karte{Lisa}{Ragosina}
+\karte{Marius}{Hogräfer}
+\karte{Nikolai}{Kostka}
+\karte{Daniel}{Fischer}
+\karte{Sara}{Groß}
+\karte{Christian}{Rose}
+\karte{Marc}{Satkowski}
+\karte{Lucas}{Woltmann}
+\karte{Richard}{Kwasnicki}
+\karte{Thomas}{Hauptvogel}
+\karte{Ben}{Kosmann}
+\karte{Peter}{Klausing}
+\karte{Melanie}{Ramsch}
+\karte{Lara}{von Schumann}
+\karte{Ian}{Alexander List}
+\karte{Anja}{Reusch}
+\karte{Frank}{Hedecke}
+\karte{Duc}{Anh Trinh}
+\karte{Sven}{Goly}
+\karte{Fabian}{Koller}
+\karte{Christoph}{Jurkowski}
+\karte{Florian}{Schmidt}
+\karte{Manuel}{Thieme}
+\karte{Emma}{Müller}
+\karte{Anne-Marie}{Oelschläger}
+\karte{Stefan}{Weckend}
+\karte{Christian}{Riedel}
+\karte{Ulrich}{Huber}
+\karte{Richard}{Mörbitz}
+\karte{\fontsize{54}{0}\selectfont Franz-Wilhelm}{Schumann}
+\karte{Sebastian}{Hahn}
+\karte{Christian}{Kabelitz}
+\karte{Michael}{Schneider}
+\karte{Adrian}{Ackermann}
+\karte{Lars}{Engeln}
+\karte{Sebastian}{Kiehne}
+\karte{Matthias}{Lehne}
+\karte{Andreas}{Wilke}
+\karte{Sandra}{Waske}
+\karte{Axel}{Reinicke}
+\karte{Willi}{Mentzel}
+\karte{Sandra}{Kukulka}
+\karte{Julian}{\fontsize{20}{0}\selectfont Lars Striegl Freiherr von Hoverbeck genannt von Schoenaich}
+\karte{Philipp}{Plotz}
+\karte{Björn}{Einert}
+\karte{Martin}{Eisoldt}
+\karte{Franziska}{Schwenke}
+\karte{Marco}{Strietzel}
+\karte{Hung}{Tran Duc}
 
 \end{document}
