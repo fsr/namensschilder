@@ -3,11 +3,17 @@
 \documentclass{article}
 \usepackage[paperwidth=90mm,paperheight=53.5mm,nohead,nofoot,margin=3mm]{geometry}
 \usepackage{graphicx}
+\usepackage{xcolor}
 
 \setlength{\parindent}{0pt}
 \pagestyle{empty}
 \usepackage{fontspec}
 \setmainfont{Haettenschweiler}
+\newfontfamily{\stampfont}{Top Secret}
+
+%\definecolor{esecolor}{rgb}{0.34, 0.23, 0.46}
+\definecolor{stampcolor}{rgb}{0.8, 0.2, 0.2}
+
 \raggedright
 
 %\usepackage{background}
@@ -20,8 +26,16 @@
 %	}%
 %}
 
-\newcommand{\karte}[2]{%
+\newcommand{\karte}[3]{%
 	\includegraphics[width=1.5cm]{smalllogo.pdf}%
+	\hspace*{1em}%
+	\raisebox{1em}{%
+		\rotatebox{10}{%
+			\stampfont%
+			\fontsize{25}{0}\selectfont%
+			\color{stampcolor}{#3}%
+		}%
+	}%
 	\vfill%
 	\raggedleft%
 	{\fontsize{65}{0}\selectfont #1\par}%
@@ -32,67 +46,67 @@
 
 \begin{document}
 
-\karte{Kilian}{Költzsch}
-\karte{Dirk}{Legler}
-\karte{Katja}{Linnemann}
-\karte{Frank}{Hedecke}
-\karte{Sebastian}{Mielke}
-\karte{Marc}{Satkowski}
-\karte{Lars}{Engeln}
-\karte{Sebastian}{Vogt}
-\karte{Ian}{List}
-\karte{Felix}{Döring}
-\karte{Philipp}{Heisig}
-\karte{\fontsize{54}{0}\selectfont Franz-Wilhelm}{Schumann}
-\karte{Manuel}{Thieme}
-\karte{Raphael}{Lais}
-\karte{Lucas}{Woltmann}
-\karte{Sascha}{Peukert}
-\karte{Anita}{Grützner}
-\karte{Simon}{Hanisch}
-\karte{Max}{Korn}
-\karte{Paul}{Genssler}
-\karte{Lucas}{Vogel}
-\karte{Jasmin}{Delling}
-\karte{Max}{Staff}
-\karte{Anna}{Brauer}
-\karte{Anika}{Borchmann}
-\karte{Jens}{Wettlaufer}
-\karte{Bettina}{Groschopp}
-\karte{Michael}{Nix}
-\karte{Jan-Erik}{Wieczorek}
-\karte{Jakob}{Blume}
-\karte{Niklas}{Fallik}
-\karte{Richard}{Mörbitz}
-\karte{Markus}{Damm}
-\karte{Franziska}{Ressel}
-\karte{Tilo}{Werdin}
-\karte{Dominik}{Olwig}
-\karte{Alexandra}{Krien}
-\karte{Adrian}{Lieber}
-\karte{Sönke}{Huster}
-\karte{Michael}{Schneider}
-\karte{Ulrich}{Huber}
-\karte{Thomas}{Bruhn}
-\karte{Felix}{Wittwer}
-\karte{Sebastian}{Schrader}
-\karte{Marcel}{Rösler}
-\karte{Robin}{Herrmann}
-\karte{Thomas}{Hauptvogel}
-\karte{Maximilian}{Kindt}
-\karte{Simon}{Rother}
-\karte{Christian}{Kabelitz}
-\karte{Clemens}{Köhler}
-\karte{Mike}{Pohl}
-\karte{Lara}{von Schumann}
-\karte{Patrick}{Stiller}
-\karte{Sebastian}{Hahn}
-\karte{Christoph}{Kepler}
-\karte{Axel}{Reinicke}
-\karte{Lukas}{Haack}
-\karte{Joschka}{Heinrich}
-\karte{Simon}{Klinkertz}
-\karte{Sandra}{Waske}
-\karte{Justus}{Adam}
+\karte{Kilian}{Költzsch}{[ORGA]}
+\karte{Dirk}{Legler}{[ORGA]}
+\karte{Katja}{Linnemann}{[ORGA]}
+\karte{Frank}{Hedecke}{[ORGA]}
+\karte{Sebastian}{Mielke}{[ORGA]}
+\karte{Marc}{Satkowski}{[ORGA]}
+\karte{Lars}{Engeln}{[ORGA]}
+\karte{Sebastian}{Vogt}{}
+\karte{Ian}{List}{}
+\karte{Felix}{Döring}{}
+\karte{Philipp}{Heisig}{[ORGA]}
+\karte{\fontsize{54}{0}\selectfont Franz-Wilhelm}{Schumann}{}
+\karte{Manuel}{Thieme}{}
+\karte{Raphael}{Lais}{}
+\karte{Lucas}{Woltmann}{[ORGA]}
+\karte{Sascha}{Peukert}{[ORGA]}
+\karte{Anita}{Grützner}{[ORGA]}
+\karte{Simon}{Hanisch}{[ORGA]}
+\karte{Max}{Korn}{}
+\karte{Paul}{Genssler}{}
+\karte{Lucas}{Vogel}{}
+\karte{Jasmin}{Delling}{}
+\karte{Max}{Staff}{}
+\karte{Anna}{Brauer}{}
+\karte{Anika}{Borchmann}{}
+\karte{Jens}{Wettlaufer}{}
+\karte{Bettina}{Groschopp}{}
+\karte{Michael}{Nix}{}
+\karte{Jan-Erik}{Wieczorek}{}
+\karte{Jakob}{Blume}{}
+\karte{Niklas}{Fallik}{}
+\karte{Richard}{Mörbitz}{}
+\karte{Markus}{Damm}{}
+\karte{Franziska}{Ressel}{}
+\karte{Tilo}{Werdin}{}
+\karte{Dominik}{Olwig}{}
+\karte{Alexandra}{Krien}{}
+\karte{Adrian}{Lieber}{}
+\karte{Sönke}{Huster}{}
+\karte{Michael}{Schneider}{}
+\karte{Ulrich}{Huber}{}
+\karte{Thomas}{Bruhn}{}
+\karte{Felix}{Wittwer}{}
+\karte{Sebastian}{Schrader}{[ORGA]}
+\karte{Marcel}{Rösler}{}
+\karte{Robin}{Herrmann}{}
+\karte{Thomas}{Hauptvogel}{}
+\karte{Maximilian}{Kindt}{}
+\karte{Simon}{Rother}{}
+\karte{Christian}{Kabelitz}{}
+\karte{Clemens}{Köhler}{}
+\karte{Mike}{Pohl}{}
+\karte{Lara}{von Schumann}{}
+\karte{Patrick}{Stiller}{}
+\karte{Sebastian}{Hahn}{}
+\karte{Christoph}{Kepler}{}
+\karte{Axel}{Reinicke}{}
+\karte{Lukas}{Haack}{}
+\karte{Joschka}{Heinrich}{}
+\karte{Simon}{Klinkertz}{}
+\karte{Sandra}{Waske}{}
+\karte{Justus}{Adam}{}
 
 \end{document}
