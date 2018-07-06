@@ -1,0 +1,43 @@
+% XeLaTeX
+% Vorlage "NF-Vorstellung", v0.1
+
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{fontspec}
+\setmainfont{PT Sans}
+\newfontfamily{\headfont}{Exo}
+
+\usepackage{graphicx}
+\usepackage{xcolor}
+
+\usepackage[zw32010, crossmark]{ticket}
+
+\hoffset=-8.911mm
+\voffset=-16.83mm
+
+\definecolor{uni}{gray}{.4}
+\definecolor{myGreen}{rgb}{0.694, 0.882, 0.109}
+
+\renewcommand{\ticketdefault}{
+	\put(43,  1){\includegraphics[width=40mm]{LogoCropped.pdf}}
+	\put( 6, 18){\line(1,0){25}}
+	\put( 6, 13){\footnotesize TU Dresden}
+	\put( 6,  9){\footnotesize FSR Informatik}
+	\put( 6,  5){\footnotesize www.ifsr.de}
+}
+
+\newcommand{\vcard}[3]{\ticket{
+	\put(4, 45){\LARGE\headfont\bfseries\color{myGreen} #1}
+	\put(6, 38){\textbf{#2}}
+	\put(6, 33){\footnotesize #3}
+}}
+
+\begin{document}
+
+\color{uni}
+
+\vcard{Matthias Stuhlbein}{Akustik}{stuhlbein@ifsr.de}%
+% Beispiel für Menschen ohne Mail-Adresse:
+\vcard{Ayn Rand}{Literaturgeschichte}{}%
+
+\end{document}
