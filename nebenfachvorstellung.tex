@@ -20,24 +20,28 @@
 
 \renewcommand{\ticketdefault}{
 	\put(43,  1){\includegraphics[width=40mm]{LogoCropped.pdf}}
-	\put( 6, 18){\line(1,0){25}}
-	\put( 6, 13){\footnotesize TU Dresden}
-	\put( 6,  9){\footnotesize FSR Informatik}
-	\put( 6,  5){\footnotesize www.ifsr.de}
+	\put( 4, 18){\line(1,0){25}}
+	\put( 4, 13){\footnotesize TU Dresden}
+	\put( 4,  9){\footnotesize FSR Informatik}
+	\put( 4,  5){\footnotesize www.ifsr.de}
 }
 
-\newcommand{\vcard}[3]{\ticket{
-	\put(4, 45){\LARGE\headfont\bfseries\color{myGreen} #1}
-	\put(6, 38){\textbf{#2}}
-	\put(6, 33){\footnotesize #3}
+\newcommand{\vcard}[5]{\ticket{
+    \put(4, 47){\footnotesize\bfseries\color{myGreen} #1}
+	\put(4, 39){\LARGE\headfont\bfseries\color{myGreen} #2}
+	\put(4, 32){\textbf{#3}}
+	\put(4, 27){\textbf{#4}}
+	\put(4, 22){\footnotesize #5}
 }}
 
+
+
 \begin{document}
-
+%
 \color{uni}
-
-\vcard{Matthias Stuhlbein}{Akustik}{stuhlbein@ifsr.de}%
-% Beispiel für Menschen ohne Mail-Adresse:
-\vcard{Ayn Rand}{Literaturgeschichte}{}%
-
+%
+% USAGE: KEINE Leerzeilen lassen. Wenn doch, dann mit `%` escapen.
+% \vcard{Titel}{Name}{NF-Name}{NF-Name #2 (falls nötig, sonst leer)}{Mail (falls vorhanden)}
+%
+\vcard{Prof. Dr. rer. nat. habil.}{Matthias Stuhlbein}{Künstliche Intelligenz}{}{stuhlbein@ifsr.de}
 \end{document}
