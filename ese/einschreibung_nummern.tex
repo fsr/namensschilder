@@ -1,0 +1,64 @@
+% XeLaTeX
+
+\documentclass{article}
+\usepackage[paperwidth=90mm,paperheight=29mm,nohead,nofoot,margin=3mm]{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{forloop}
+\usepackage{fmtcount}
+
+\setlength{\parindent}{0pt}
+\pagestyle{empty}
+\usepackage{fontspec}
+\setmainfont{Haettenschweiler}
+\newfontfamily{\stampfont}{Top Secret}
+
+%\definecolor{esecolor}{rgb}{0.34, 0.23, 0.46}
+\definecolor{stampcolor}{rgb}{0.796, 0.376, 0.251}
+\definecolor{grey}{rgb}{0.2,0.2,0.2}
+
+\raggedright
+
+%\usepackage{background}
+\usepackage{color}
+%\definecolor{esegreen}{rgb}{0.45, 0.71, 0.34} % 114, 182, 87
+%\backgroundsetup{scale=5,angle=0,opacity=1,contents={%
+%	\begin{tikzpicture}[remember picture,overlay]%
+%		\path [left color = esegreen, right color = white] (-1,-1) rectangle (1,1);%
+%	\end{tikzpicture}%
+%	}%
+%}
+
+\newcommand{\karte}[3]{%
+    \begin{minipage}[b]{.18\textwidth}
+        \includegraphics[width=1.45cm]{karlchen_thick}%
+    \end{minipage}
+    \begin{minipage}[b]{.24\textwidth}
+        \fontsize{49}{0}\selectfont
+        \color{stampcolor}{ESE}
+        \fontsize{36.5}{0}\selectfont
+        \color{stampcolor}{2018}
+    \end{minipage}
+    \begin{minipage}[b][6em][t]{.3\textwidth}
+		\rotatebox{10}{%
+			\stampfont%
+			\fontsize{40}{0}\selectfont%
+			\color{grey}{#3}%
+		}%
+    \end{minipage}
+	\vfill%
+	\raggedleft%
+	{\fontsize{57}{0}\selectfont #1\par}%
+	{\fontsize{25}{0}\selectfont #2\par}%
+	\raggedright%
+	\clearpage%
+}
+
+\begin{document}
+\newcounter{i}
+\forloop{i}{0}{\value{i}<500}
+{
+    \karte{}{}{[42.\padzeroes[3]{\decimal{i}}]}
+}
+
+\end{document}

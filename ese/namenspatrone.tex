@@ -1,0 +1,81 @@
+% XeLaTeX
+
+\documentclass{article}
+\usepackage[paperwidth=90mm,paperheight=29mm,nohead,nofoot,margin=3mm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{forloop}
+\usepackage{fmtcount}
+
+\setlength{\parindent}{0pt}
+\pagestyle{empty}
+\usepackage{fontspec}
+\setmainfont{Haettenschweiler}
+\newfontfamily{\stampfont}{Top Secret}
+
+%\definecolor{esecolor}{rgb}{0.34, 0.23, 0.46}
+\definecolor{stampcolor}{rgb}{0.796, 0.376, 0.251}
+
+\raggedright
+
+%\usepackage{background}
+\usepackage{color}
+%\definecolor{esegreen}{rgb}{0.45, 0.71, 0.34} % 114, 182, 87
+%\backgroundsetup{scale=5,angle=0,opacity=1,contents={%
+%   \begin{tikzpicture}[remember picture,overlay]%
+%       \path [left color = esegreen, right color = white] (-1,-1) rectangle (1,1);%
+%   \end{tikzpicture}%
+%   }%
+%}
+
+\newcommand{\karte}[2]{%
+    \begin{minipage}[b]{.18\textwidth}
+        \includegraphics[width=1.45cm]{karlchen_thick}%
+    \end{minipage}
+    \begin{minipage}[b]{.24\textwidth}
+        \fontsize{49}{0}\selectfont
+        \color{stampcolor}{ESE}
+        \fontsize{36.5}{0}\selectfont
+        \color{stampcolor}{2018}
+    \end{minipage}
+    \begin{minipage}[b][5.5em][t]{.55\textwidth}
+        \begin{flushright}
+            \fontsize{40}{0}\selectfont #1\\
+            \fontsize{25}{0}\selectfont #2\\
+        \end{flushright}
+    \end{minipage}
+    \vfill%
+}
+\newcounter{i}
+\newcommand{\patron}[3]{%
+    \forloop{i}{0}{\value{i}<#3}
+    {%
+        \karte{#1}{#2}
+    }
+}
+
+\begin{document}
+\patron{Edsger}{Dijkstra}{27}
+\patron{Kurt}{Gödel}{27}
+\patron{Konrad}{Zuse}{27}
+\patron{Tim}{Berners-Lee}{27}
+\patron{John}{von Neumann}{27}
+\patron{Dennis}{Ritchie}{27}
+\patron{Alan}{Turing}{27}
+\patron{Ada}{Lovelace}{27}
+\patron{Grace}{Hopper}{27}
+\patron{Richard}{Stallman}{27}
+\patron{Linus}{Torvalds}{27}
+\patron{Noam}{Chomsky}{27}
+\patron{Christiane}{Floyd}{27}
+\patron{Stephen}{Cook}{27}
+\patron{Ken}{Thompson}{27}
+\patron{Donald}{Knuth}{27}
+\patron{Margaret}{Hamilton}{28}
+\patron{Andreas}{Pfitzmann}{74}
+
+
+\end{document}
