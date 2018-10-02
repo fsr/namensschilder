@@ -12,12 +12,13 @@
 \newfontfamily{\stampfont}{Top Secret}
 
 %\definecolor{esecolor}{rgb}{0.34, 0.23, 0.46}
-\definecolor{stampcolor}{rgb}{0.8, 0.2, 0.2}
+\definecolor{logocolor}{rgb}{0.796, 0.376, 0.251}
+\definecolor{stampcolor}{rgb}{0.34, 0.34, 0.34}
 
 \raggedright
 
 %\usepackage{background}
-%\usepackage{color}
+\usepackage{color}
 %\definecolor{esegreen}{rgb}{0.45, 0.71, 0.34} % 114, 182, 87
 %\backgroundsetup{scale=5,angle=0,opacity=1,contents={%
 %	\begin{tikzpicture}[remember picture,overlay]%
@@ -27,89 +28,33 @@
 %}
 
 \newcommand{\karte}[3]{%
-	\includegraphics[width=1.5cm]{smalllogo.pdf}%
-	\hspace*{1em}%
-	\raisebox{1em}{%
+    \begin{minipage}[b]{.18\textwidth}
+        \includegraphics[width=1.45cm]{karlchen_thick}%
+    \end{minipage}
+    \begin{minipage}[b]{.42\textwidth}
+        \fontsize{49}{0}\selectfont
+        \color{logocolor}{ESE}
+        \fontsize{36.5}{0}\selectfont
+        \color{logocolor}{2018}
+    \end{minipage}
+    %\hspace{-1cm}
+    \begin{minipage}[b][5em][t]{.3\textwidth}
 		\rotatebox{10}{%
 			\stampfont%
 			\fontsize{25}{0}\selectfont%
 			\color{stampcolor}{#3}%
 		}%
-	}%
+    \end{minipage}
 	\vfill%
 	\raggedleft%
-	{\fontsize{65}{0}\selectfont #1\par}%
+	{\fontsize{64}{0}\selectfont #1\par}%
 	{\fontsize{25}{0}\selectfont #2\par}%
 	\raggedright%
 	\clearpage%
 }
 
 \begin{document}
-
-\karte{Robert}{Hoppermann}{}
-\karte{Prof. Franzi}{\phantom{Nachname}}{}
-
-%\karte{Kilian}{Költzsch}{[ORGA]}
-%\karte{Dirk}{Legler}{[ORGA]}
-%\karte{Katja}{Linnemann}{[ORGA]}
-%\karte{Frank}{Hedecke}{[ORGA]}
-%\karte{Sebastian}{Mielke}{[ORGA]}
-%\karte{Marc}{Satkowski}{[ORGA]}
-%\karte{Lars}{Engeln}{[ORGA]}
-%\karte{Sebastian}{Vogt}{}
-%\karte{Ian}{List}{}
-%\karte{Felix}{Döring}{}
-%\karte{Philipp}{Heisig}{[ORGA]}
-%\karte{\fontsize{54}{0}\selectfont Franz-Wilhelm}{Schumann}{}
-%\karte{Manuel}{Thieme}{}
-%\karte{Raphael}{Lais}{}
-%\karte{Lucas}{Woltmann}{[ORGA]}
-%\karte{Sascha}{Peukert}{[ORGA]}
-%\karte{Anita}{Grützner}{[ORGA]}
-%\karte{Simon}{Hanisch}{[ORGA]}
-%\karte{Max}{Korn}{}
-%\karte{Paul}{Genssler}{}
-%\karte{Lucas}{Vogel}{}
-%\karte{Jasmin}{Delling}{}
-%\karte{Max}{Staff}{}
-%\karte{Anna}{Brauer}{}
-%\karte{Anika}{Borchmann}{}
-%\karte{Jens}{Wettlaufer}{}
-%\karte{Bettina}{Groschopp}{}
-%\karte{Michael}{Nix}{}
-%\karte{Jan-Erik}{Wieczorek}{}
-%\karte{Jakob}{Blume}{}
-%\karte{Niklas}{Fallik}{}
-%\karte{Richard}{Mörbitz}{}
-%\karte{Markus}{Damm}{}
-%\karte{Franziska}{Ressel}{}
-%\karte{Tilo}{Werdin}{}
-%\karte{Dominik}{Olwig}{}
-%\karte{Alexandra}{Krien}{}
-%\karte{Adrian}{Lieber}{}
-%\karte{Sönke}{Huster}{}
-%\karte{Michael}{Schneider}{}
-%\karte{Ulrich}{Huber}{}
-%\karte{Thomas}{Bruhn}{}
-%\karte{Felix}{Wittwer}{}
-%\karte{Sebastian}{Schrader}{[ORGA]}
-%\karte{Marcel}{Rösler}{}
-%\karte{Robin}{Herrmann}{}
-%\karte{Thomas}{Hauptvogel}{}
-%\karte{Maximilian}{Kindt}{}
-%\karte{Simon}{Rother}{}
-%\karte{Christian}{Kabelitz}{}
-%\karte{Clemens}{Köhler}{}
-%\karte{Mike}{Pohl}{}
-%\karte{Lara}{von Schumann}{}
-%\karte{Patrick}{Stiller}{}
-%\karte{Sebastian}{Hahn}{}
-%\karte{Christoph}{Kepler}{}
-%\karte{Axel}{Reinicke}{}
-%\karte{Lukas}{Haack}{}
-%\karte{Joschka}{Heinrich}{}
-%\karte{Simon}{Klinkertz}{}
-%\karte{Sandra}{Waske}{}
-%\karte{Justus}{Adam}{}
+\karte{Kevin}{Schmid}{}
+\karte{Julius}{Felchow}{}
 
 \end{document}
